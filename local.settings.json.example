@@ -1,0 +1,13 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=...;AccountKey=...;EndpointSuffix=core.windows.net",
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "PGUSER": "...",
+    "PGPASSWORD": "...",
+    "PGHOST": "...",
+    "PGSSLMODE": "require",
+    "PGDATABASE": "...",
+    "FLEETCARE_CONNSTRING": "DefaultEndpointsProtocol=https;AccountName=...;AccountKey=...;EndpointSuffix=core.windows.net"
+  }
+}
