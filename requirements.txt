@@ -1,4 +1,4 @@
-azure-functions==1.0.5
-azure-storage-blob==12.0.0
-peewee==3.12.0
-psycopg2-binary==2.8.4
+azure-functions
+azure-storage-blob
+peewee
+psycopg2-binary
