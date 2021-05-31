@@ -2,11 +2,11 @@
   "scriptFile": "__init__.py",
   "bindings": [
     {
-      "name": "myblob",
-      "type": "blobTrigger",
+      "type": "blob",
       "direction": "in",
+      "name": "myblob",
       "path": "tracking/{name}",
-      "connection": "FLEETCARE_CONNSTRING"
+      "connection": "dbcafleetcaredata_STORAGE"
     }
   ]
 }
