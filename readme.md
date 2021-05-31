@@ -1,15 +1,11 @@
-# BlobTrigger - Python
+# ingest-azblob-to-pg - Python
 
-The `BlobTrigger` makes it incredibly easy to react to new Blobs inside of Azure Blob Storage. This sample demonstrates a simple use case of processing data from a given Blob using Python.
-
-## How it works
-
-For a `BlobTrigger` to work, you provide a path which dictates where the blobs are located inside your container, and can also help restrict the types of blobs you wish to return. For instance, you can set the path to `samples/{name}.png` to restrict the trigger to only the samples path and only blobs with ".png" at the end of their name.
+This function app is intended to be wired up to an eventgrid `blobtrigger` event that picks up blobs from a storage container and processes them into a staging area for further processing.
 
 ## Initial setup
 
-Setup venv ```python3 -m venv .venv```, then use vscode to run debug or run pipInstall tasks
-
-## Learn more
-
-<TODO> Documentation
+- Clone this repository
+- Setup venv ```python3 -m venv .venv```, then use vscode to run debug or run pipInstall tasks
+- Configure `local.settings.json`
+- Upload settings to a function app (easiest to create in portal then deploy from VS Code)
+- Deploy project to a function app

@@ -1,4 +1,4 @@
-azure-functions
-azure-storage-blob
-peewee
-psycopg2-binary
+azure-functions>=1.7
+azure-storage-blob>=12.8
+peewee>=3.14
+psycopg2-binary>=2.8
