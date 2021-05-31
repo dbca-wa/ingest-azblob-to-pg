@@ -23,7 +23,7 @@ def init_database():
 
 def main(myblob: func.InputStream):
     container, blobname = myblob.name.split("/", 1)
-    blobclient = BlobServiceClient.from_connection_string(os.environ["FLEETCARE_CONNSTRING"])
+    blobclient = BlobServiceClient.from_connection_string(os.environ["dbcafleetcaredata_STORAGE"])
     blob = blobclient.get_container_client(container).get_blob_client(blobname)
     blobprops = blob.get_blob_properties()
     blobtext = blob.download_blob().content_as_text()
