@@ -2,12 +2,9 @@
   "scriptFile": "__init__.py",
   "bindings": [
     {
-      "type": "blobTrigger",
-      "source": "EventGrid",
+      "type": "eventGridTrigger",
       "direction": "in",
-      "name": "myblob",
-      "path": "tracking/{name}",
-      "connection": "dbcafleetcaredata_STORAGE"
+      "name": "event"
     }
   ]
 }
