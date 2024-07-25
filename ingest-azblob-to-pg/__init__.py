@@ -6,6 +6,7 @@ from peewee import PostgresqlDatabase, Model, CharField, DateTimeField, TextFiel
 
 db = PostgresqlDatabase(os.environ["PGDATABASE"])
 
+
 class LogEntry(Model):
     name = CharField()
     created = DateTimeField()
@@ -17,9 +18,11 @@ class LogEntry(Model):
         )
         database = db
 
+
 def init_database():
     db.connect()
     db.create_tables([LogEntry])
+
 
 def main(event: func.EventGridEvent):
     container, blobname = event.subject.split("/containers/", 1)[1].split("/blobs/", 1)
@@ -30,4 +33,4 @@ def main(event: func.EventGridEvent):
     LogEntry(name=f"{container}/{blobname}", created=event.event_time, text=blobtext).save()
     logging.info(f"Imported blob to database \n"
                  f"Name: {blobname}\n"
-                 f"Time: \n {blobprops.last_modified}")
+                 f"Time: {blobprops.last_modified}\n")
